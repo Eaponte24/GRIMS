@@ -14,7 +14,14 @@ Department.init(
     department_name: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+    department_image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
   },
   {
     sequelize,
