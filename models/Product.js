@@ -15,6 +15,13 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    product_image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
