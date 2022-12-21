@@ -1,4 +1,4 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Product extends Model {}
@@ -23,7 +23,7 @@ Product.init(
       },
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       validate: {
         isDecimal: true,
@@ -50,7 +50,7 @@ Product.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,  
+    underscored: true,
     modelName: 'product',
   }
 );
