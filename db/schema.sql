@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS grims_db;
+
+CREATE DATABASE grims_db;
