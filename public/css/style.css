@@ -1,0 +1,11 @@
+.card1{
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+    
+
+
+.card1:hover{
+    box-shadow: 5px 6px 6px 2px black;
+    transform: scale(1.1);
+}
