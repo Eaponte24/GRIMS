@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Department } = require('../models');
+const { Department, Product, User } = require('../models');
 const withAuth = require('../utils/auth');
 //------------------------------------------------------------------------------------
     router.get("/", withAuth, async (req, res) => {
@@ -24,25 +24,31 @@ const withAuth = require('../utils/auth');
       }
     });
     
-    // // homepage route for a single department
-    // router.get("/departments/:id", async (req, res) => {
-    //   try {
-    //     const departmentData = await Department.findOne({
-    //       where: {
-    //         id: req.params.id,
-    //       },
-    //     });
+    // homepage route for a single department
+    router.get("/departments/:id", async (req, res) => {
+      try {
+        const departmentData = await Department.findOne({
+          where: {
+            id: req.params.id,
+          },
+          include: [
+            {
+              model: Product,
+              attributes: ["id", "product_name", "price", "stock", "product_image"],
+            },
+          ],
+        });
     
-    //     const departments = departmentData.get({ plain: true });
+        const departments = departmentData.get({ plain: true });
     
-    //     console.log(departments);
+        console.log(departments);
     
-    //     // will set this to render homepage later on, for now just testing
-    //     return res.json(departments);
-    //   } catch (err) {
-    //     res.status(500).json(err);
-    //   }
-    // });
+        // will set this to render homepage later on, for now just testing
+        return res.json(departments);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    });
 
 //-------------------------------------------------------------------------------
 router.get('/login', (req, res) => {
