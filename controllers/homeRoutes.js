@@ -2,18 +2,15 @@ const router = require('express').Router();
 const { Department, Product, User } = require('../models');
 const withAuth = require('../utils/auth');
 //------------------------------------------------------------------------------------
-    router.get("/", withAuth, async (req, res) => {
+    router.get("/",  async (req, res) => {
       try {
         const departmentData = await Department.findAll({});
     
         const departments = departmentData.map((Department) =>
           Department.get({ plain: true })
         );
-    
-        // console.log(departments);
-    
-        // will set this to render homepage later on, for now just testing
-        // return res.json(departments);
+
+        console.log(departments);
 
         res.render('homepage', {
           departments,
@@ -39,12 +36,18 @@ const withAuth = require('../utils/auth');
           ],
         });
     
-        const departments = departmentData.get({ plain: true });
+        const productsArray = departmentData.products;
+
+
+        // converting the productsArray into a plain object
+        const products = productsArray.map((Product) => Product.get({ plain: true }));
     
-        console.log(departments);
+        console.log(products);
     
-        // will set this to render homepage later on, for now just testing
-        return res.json(departments);
+        res.render('products', {
+          products,
+          logged_in: req.session.logged_in,
+        });
       } catch (err) {
         res.status(500).json(err);
       }
