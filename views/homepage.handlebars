@@ -1,9 +1,9 @@
 {{#each departments as |department| }}
     <div class="col mb-3 card1 ">
-      <a class="link" href="/departments/{{id}}">
-      <div class="card" style="background-image: url('{{department_image}}');  background-position: center;">
+      <a class="link text-decoration-none" href="/departments/{{id}}">
+      <div class="card" style="background-image: url('{{department.department_image}}');  background-position: center;  background-size: cover;">
         <div class="card-body">
-          <h5 class="text-center display-4 font-weight-bold">{{department_name}}</h5>
+          <h5 class="text-center display-4" style="text-shadow: 2px 2px 4px white; font-weight: bold;">{{department_name}}</h5>
           <p class="card-text"></p>
         </div>
       </div>
