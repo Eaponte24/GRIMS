@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -39,6 +39,55 @@
                 <button class="nav-link btn" id="logout">logout</button>
               </li>
             </ul>
+            {{!------------------------------------------------------------------------------------------------------}}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add New Product
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method='post' action='' enctype="multipart/form-data">
+
+          <div class="form-outline mb-4">
+            <input type="password" id="" class="form-control form-control-lg" />
+            <label class="form-label" for="">Product Name</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="password" id="" class="form-control form-control-lg" />
+            <label class="form-label" for="">Department ID</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="password" id="" class="form-control form-control-lg" />
+            <label class="form-label" for="">Price</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="password" id="" class="form-control form-control-lg" />
+            <label class="form-label" for="">Stock</label>
+          </div>
+
+          Select image : <input type='file' name='file' id='file' class='form-control' ><br>
+          <input type='button' class='btn btn-info' value='Upload' id='btn_upload'>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{!--------------------------------------------------------------------------------------------------------------}}
             <form class="d-flex search-form " role="search">
               <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>

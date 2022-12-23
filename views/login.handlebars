@@ -34,8 +34,41 @@
                     <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                   </div>
 
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
-                      style="color: #393f81;">Register here</a></p>
+{{!-------------------------------------------------------------------------------------------------------}}
+                                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Sign Up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                    <form method='post' action='' enctype="multipart/form-data">
+
+                    <div class="form-outline mb-4">
+                    <input type="email" id="" class="form-control form-control-lg" />
+                    <label class="form-label" for="">Email</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                    <input type="password" id="" class="form-control form-control-lg" />
+                    <label class="form-label" for="">Password</label>
+                    </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+{{!-------------------------------------------------------------------------------------------------------}}
                 </form>
 
               </div>
