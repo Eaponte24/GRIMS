@@ -53,6 +53,36 @@ const withAuth = require('../utils/auth');
       }
     });
 
+    // get a single product with a department_id in /products/:id
+router.get("/products/:id", async (req, res) => {
+  try {
+    const productData = await Product.findByPk(req.params.id, {
+      include: [
+        {
+          model: Department,
+          attributes: ["id", "department_name", "department_image"],
+        },
+      ],
+    });
+
+    if (!productData) {
+      res.status(404).json({ message: "No product found with this id" });
+      return;
+    }
+
+    const singleProduct = productData.get({ plain: true });
+
+    console.log(singleProduct);
+
+    res.render('singleproduct', {
+      singleProduct,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //-------------------------------------------------------------------------------
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {

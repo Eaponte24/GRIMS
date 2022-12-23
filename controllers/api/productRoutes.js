@@ -20,28 +20,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// get a single product with a department_id in /api/products/:id
-router.get("/:id", async (req, res) => {
-  try {
-    const productData = await Product.findByPk(req.params.id, {
-      include: [
-        {
-          model: Department,
-          attributes: ["id", "department_name", "department_image"],
-        },
-      ],
-    });
 
-    if (!productData) {
-      res.status(404).json({ message: "No product found with this id" });
-      return;
-    }
-
-    res.json(productData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 // create a new product with a department_id in /api/products
 router.post("/",  async (req, res) => {
