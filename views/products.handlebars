@@ -1,0 +1,10 @@
+{{#each products as |product| }}
+    <div class="col mb-3 card1 ">
+      <div class="card" style="background-image: url('{{product.product_image}}');  background-position: center;">
+        <div class="card-body">
+          <h5 class="text-center display-4 font-weight-bold">{{product.product_name}}</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+{{/each}}

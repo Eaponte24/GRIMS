@@ -1,0 +1,10 @@
+{{#each departments as |department| }}
+    <div class="col mb-3 card1 ">
+      <div class="card" style="background-image: url('{{department.department_image}}');  background-position: center;">
+        <div class="card-body">
+          <h5 class="text-center display-4 font-weight-bold">{{department.department_name}}</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+{{/each}}
