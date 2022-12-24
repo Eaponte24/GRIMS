@@ -1,16 +1,17 @@
-// get all departments
-const getDepartments = async () => {
-	const response = await fetch('/api/departments');
-	const departments = await response.json();
-	return departments;
-};
+// import Department from '../models/Department';
+const { Department } = require('../models');
 
 getDepartmentId = async (departmentName) => {
-  const departments = await getDepartments();
-  const department = departments.find(
-    (department) => department.department_name === departmentName
-  );
-  return department.id;
+  try {
+    const departmentData = await Department.findOne({
+      where: {
+        department_name: departmentName,
+      },
+    });
+    return departmentData.id;
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const parseFileName = (name) => {
@@ -21,4 +22,4 @@ const parseFileName = (name) => {
 		.toLowerCase();
 };
 
-module.exports = { getDepartments, getDepartmentId, parseFileName };
+module.exports = { getDepartmentId, parseFileName };
