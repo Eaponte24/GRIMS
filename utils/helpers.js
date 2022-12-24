@@ -14,6 +14,7 @@ getDepartmentId = async (departmentName) => {
 };
 
 const parseFileName = (name) => {
+  name.normalize("NKFD").replace(/\p{Diacritic}/gu, "")
 	return name
 		.replace(/[^a-zA-Z0-9 ]/g, '')
 		.replace(/\s/g, '_')
