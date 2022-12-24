@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Product, Department } = require('../../models');
 const withAuth = require('../../utils/auth');
+const { getDepartmentId, parseFileName } = require('../../utils/helpers');
 const uploadImageToCloudinary = require('../../utils/uploadImage');
 const formidable = require('formidable');
 const fs = require('fs');
@@ -95,8 +96,7 @@ router.delete('/:id', async (req, res) => {
 router.post('/upload', async (req, res) => {
 	const form = new formidable.IncomingForm({
 		uploadDir: __dirname + '/../../tmp', // don't forget the __dirname here
-		//fileWriteStreamHandler: fs.createWriteStream,
-		keepExtensions: true,
+		keepExtensions: false,
 		maxFileSize: 10 * 1024 * 1024, // 10 MB
 	});
 	form.parse(req, async (err, fields, files) => {
@@ -106,16 +106,14 @@ router.post('/upload', async (req, res) => {
 		}
 		// use object destructuring to get the path property from the files.file object
 		console.log(files);
-		console.log(fields);
 		const { filepath } = files.product_image;
 		console.log(filepath);
-		const { originalFilename } = files.product_image;
-		console
-		// TO DO: parse the product name from the form field (remove special characters and spaces) 
-		// and use it as the file name
 
+		// parse the product name from the form field (remove special characters and spaces) 
+		// and use it as the file name
+		const parsedFileName = parseFileName(fields.product_name);
 		// use object destructuring to get the secure_url property from the uploadImageToCloudinary function
-		const { secure_url } = await uploadImageToCloudinary(filepath, originalFilename, fields.department_id);
+		const { secure_url } = await uploadImageToCloudinary(filepath, parsedFileName, fields.department_id);
 		fs.unlink;
 		// save the secure_url to the database along with the other fields from the form
 		// wait until secure_url resolves before saving to the database
