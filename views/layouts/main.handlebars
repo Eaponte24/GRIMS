@@ -44,7 +44,7 @@
           </ul>
           {{!------------------------------------------------------------------------------------------------------}}
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Add New Product
           </button>
 
@@ -57,7 +57,7 @@
 
                   <div class="modal-header">
                     <h1 class="modal-title fs-5">New Product</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
 
@@ -65,12 +65,22 @@
                       <label class="form-label" for="">Product Name</label>
                       <input type="text" name="product_name" class="form-control form-control-lg" />
                     </div>
-                    <!-- eventually add a drop down menu for department NAMES, this will need to be dynamic -->
+                    <!-- TO DO: make this dropdown dynamically filled with department names 
+                    so that if a new department is added to the databse it automatically shows up here
+                    use handlebards partials to loop through departments something like this?
+                    <option value="{{department.department_name}}">{{department.department_name}}</option>
+                    how would we captilize the department name? -->
                     <div class="form-outline mb-3">
-                      <label class="form-label" for="">Department ID</label>
-                      <input type="text" name="department_id" class="form-control form-control-lg" />
+                      <label class="form-label" for="department_id">Department</label>
+                      <select class="form-select" name="department_id" aria-label="grovery department selection">
+                        <option disabled selected>Choose a department</option>
+                        <option value="produce">Produce</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="meat">Meat</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="bakery">Bakery</option>
+                      </select>
                     </div>
-
                     <div class="form-outline mb-3">
                       <label class="form-label" for="">Price</label>
                       <input type="text" name="price" class="form-control form-control-lg" />
@@ -82,10 +92,11 @@
                     </div>
 
                     <p>Product Image</p>
-                    <input type="file" name="product_image" multiple="multiple" class="form-control" id="product-image"/>
+                    <input type="file" name="product_image" multiple="multiple" class="form-control"
+                      id="product-image" />
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <input type="submit" class="btn btn-primary" id='submit-btn' value="Save" />
                   </div>
                 </form>
