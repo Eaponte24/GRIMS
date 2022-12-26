@@ -139,9 +139,10 @@ router.post('/upload', async (req, res) => {
 							console.log(`${filepath} deleted successfully`);
 						}
 					});
-					res.json(productData);
+					const singleProduct = productData.get({ plain: true });
+					console.log(singleProduct);
 					// render the product page with the new product
-					res.render('singleproduct', { productData });
+					res.render('singleproduct', { singleProduct });
 				} catch (err) {
 					res.status(500).json(err);
 				}
