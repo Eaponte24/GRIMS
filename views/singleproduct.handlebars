@@ -12,4 +12,43 @@
       </div>    
 <div class="text-center">  
   <button class="btn btn-danger float-center deleteProduct" type="submit">Delete Product</button>
+{{!---------------------------------------------------------------------------------------------}}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+  Edit Product
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editModal">Edit Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                    <form method='post' action='' enctype="multipart/form-data">
+
+                    <div class="form-outline mb-4">
+                    <input type="text" id="" class="form-control form-control-lg" value="{{singleProduct.product_name}}"/>
+                    <label class="form-label" for="">Product Name</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                    <input type="text" id="" class="form-control form-control-lg" value="{{singleProduct.price}}"/>
+                    <label class="form-label" for="">Product Price</label>
+                    </div>
+
+                      <div class="form-outline mb-4">
+                    <input type="text" id="" class="form-control form-control-lg" value="{{singleProduct.stock}}" />
+                    <label class="form-label" for="">Product Stock</label>
+                    </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+{{!--------------------------------------------------------------------------------------------}}
 </div>
