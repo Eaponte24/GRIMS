@@ -6,7 +6,6 @@ const { getDepartmentId, parseFileName } = require('../../utils/helpers');
 const withAuth = require('../../utils/auth');
 const uploadImageToCloudinary = require('../../utils/uploadImage');
 
-
 // get all products
 router.get('/', async (req, res) => {
 	try {
@@ -94,7 +93,7 @@ router.delete('/:id', async (req, res) => {
 // POST route to /product/upload that will use formidable to upload the image to cloudinary using the uploadImageToCloudinary function
 // from the uploadImage.js file, then save all data from the form to the database including the secure_url from cloudinary as the product_image
 
-router.post('/upload', async (req, res) => {
+router.post('/new', async (req, res) => {
 	const form = new formidable.IncomingForm({
 		uploadDir: __dirname + '/../../tmp', // don't forget the __dirname here
 		keepExtensions: false,
@@ -118,7 +117,11 @@ router.post('/upload', async (req, res) => {
 		// upload the image to cloudinary
 		if (await departmentId) {
 			// use object destructuring to get the secure_url property from the uploadImageToCloudinary function
-			const { secure_url } = await uploadImageToCloudinary(filepath, parsedFileName, fields.department_name);
+			const { secure_url } = await uploadImageToCloudinary(
+				filepath,
+				parsedFileName,
+				fields.department_name
+			);
 			// save the secure_url to the database along with the other fields from the form
 			// wait until secure_url resolves before saving to the database
 			if (await secure_url) {
@@ -142,7 +145,7 @@ router.post('/upload', async (req, res) => {
 					const singleProduct = productData.get({ plain: true });
 					console.log(singleProduct);
 					// render the product page with the new product
-					res.render('singleproduct', { singleProduct });
+					res.render('singleproduct', { singleProduct, logged_in: req.session.logged_in });
 				} catch (err) {
 					res.status(500).json(err);
 				}
