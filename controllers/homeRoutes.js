@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 //------------------------------------------------------------------------------------
-    router.get("/",  async (req, res) => {
+    router.get("/", withAuth, async (req, res) => {
       try {
         const departmentData = await Department.findAll({});
     
@@ -116,12 +116,11 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-module.exports = router;
-
 
 // gather signup page route, will need to add a signup handlebars form
-// router.get("/signup", (req, res) => {
-//   res.render("signup");
-// });
+
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
 
 module.exports = router;
