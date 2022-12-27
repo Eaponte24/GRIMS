@@ -17,6 +17,7 @@ const deleteFormHandler = async (event) => {
   
     if (response.ok) {
       document.location.replace("/");
+      alert("Product deleted!");
     } else {
       alert(response.statusText);
     }
