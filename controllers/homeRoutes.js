@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Department, Product, User } = require('../models');
 const withAuth = require('../utils/auth');
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 //------------------------------------------------------------------------------------
     router.get("/",  async (req, res) => {
       try {
@@ -52,6 +54,27 @@ const withAuth = require('../utils/auth');
         res.status(500).json(err);
       }
     });
+
+// Search route
+   router.get("/product/:search", async (req, res) => {
+    try {
+      const productSearch = await Product.findAll({
+        where: {
+          product_name: {
+            [Op.like]: `%${req.params.search}%`
+          }
+        }
+      });
+        const products = productSearch.map((Product) => Product.get({ plain: true }));
+  
+      res.render('products', {
+        products,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
     // get a single product with a department_id in /products/:id
 router.get("/products/:id", async (req, res) => {

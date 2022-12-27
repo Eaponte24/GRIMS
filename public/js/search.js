@@ -4,15 +4,13 @@ const searchHandler = async (event) => {
     const search = document.querySelector('#search').value.trim();
   
     if (search) {
-      console.log(`search successful for ${search}`);
-      const response =  fetch('/api/products', {
+      const response =  await fetch(`/product/:${search}`, {
         method: 'GET',
-        // body: JSON.stringify({ search }),
-        // headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        console.log('search successful!');
+        document.location.replace(`/product/${search}`);
       } else {
         alert(`Failed to search ${search}` );
       }
