@@ -26,25 +26,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                     <div class="modal-body">
-                    <form method='post' action='' enctype="multipart/form-data">
+                    <form method='put' action='' enctype="multipart/form-data">
 
                     <div class="form-outline mb-4">
-                    <input type="text" id="" class="form-control form-control-lg" value="{{singleProduct.product_name}}"/>
+                    <input type="text" id="pName" class="form-control form-control-lg" value="{{singleProduct.product_name}}"/>
                     <label class="form-label" for="">Product Name</label>
                     </div>
 
                     <div class="form-outline mb-4">
-                    <input type="text" id="" class="form-control form-control-lg" value="{{singleProduct.price}}"/>
+                    <input type="text" id="pPrice" class="form-control form-control-lg" value="{{singleProduct.price}}"/>
                     <label class="form-label" for="">Product Price</label>
                     </div>
 
                       <div class="form-outline mb-4">
-                    <input type="text" id="" class="form-control form-control-lg" value="{{singleProduct.stock}}" />
+                    <input type="text" id="pStock" class="form-control form-control-lg" value="{{singleProduct.stock}}" />
                     <label class="form-label" for="">Product Stock</label>
                     </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button type="button" id="editConfirm" class="btn btn-primary">Confirm</button>
                       </div>
                     </div>
                   </div>
