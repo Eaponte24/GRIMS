@@ -20,7 +20,7 @@ const signupFormHandler = async (event) => {
     });
     if (response.ok) {
       console.log("Success! Account Created");
-
+      alert("Success! Account Created");
       document.location.replace("/");
     } else {
       alert("failed to signup");
