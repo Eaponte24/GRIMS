@@ -34,35 +34,41 @@
                     <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                   </div>
 
-{{!-------------------------------------------------------------------------------------------------------}}
+{{!------------------------------------------------------
+Sign Up Modal-------------------------------------------------}}
                                     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
   Sign Up
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
+        <h1 class="modal-title fs-5" id="signupModal">Create Account</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                     <div class="modal-body">
                     <form method='post' action='' enctype="multipart/form-data">
 
                     <div class="form-outline mb-4">
-                    <input type="email" id="" class="form-control form-control-lg" />
-                    <label class="form-label" for="">Email</label>
+                    <input type="email" id="signup-email" class="form-control form-control-lg" />
+                    <label class="form-label" for="signup-email">Email</label>
                     </div>
 
                     <div class="form-outline mb-4">
-                    <input type="password" id="" class="form-control form-control-lg" />
-                    <label class="form-label" for="">Password</label>
+                    <input type="password" id="signup-password" class="form-control form-control-lg" />
+                    <label class="form-label" for="signup-password">Password (Must contain at least 8 characters)</label>
+                    </div>
+
+                      <div class="form-outline mb-4">
+                    <input type="password" id="signup-confirm" class="form-control form-control-lg" />
+                    <label class="form-label" for="signup-confirm">Confirm Password</label>
                     </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Sign Up</button>
+                        <button type="button" id="signupConfirm" class="btn btn-primary">Sign Up</button>
                       </div>
                     </div>
                   </div>
@@ -80,3 +86,4 @@
   </div>
 </section>
 <script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
