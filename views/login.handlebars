@@ -30,9 +30,60 @@
                     <label class="form-label" for="password-login">Password</label>
                   </div>
 
-                  <div class="pt-1 mb-4">
+                  <div class="pt-1">
                     <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                   </div>
+                  </form>
+{{!-------------------------------- Forgot password  ---------------------------------------------------------------------------------}}
+            <div class="forgotPassword">
+              <a class="small text-muted" data-bs-toggle="modal" data-bs-target="#resetpassModal">Forgot password?</a>
+            </div>
+
+<!-- Modal -->
+<div class="modal fade" id="resetpassModal" tabindex="-1" aria-labelledby="resetpassModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="resetpassModal">Reset Password</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                    <form method='post' action='' enctype="multipart/form-data">
+
+                    <div class="form-outline mb-2">
+                    <input type="email" id="reset-email" class="form-control form-control-lg" />
+                    <label class="form-label" for="reset-email">Enter your account email</label><br>
+                    <span class="checkEmail text-success"></span>
+                    </div>
+                    <button type="button" id="resetemail" class="btn btn-primary mb-4">Send Email</button>
+                    </form>                    
+                    <form>
+                     <div class="form-outline mb-4">
+                    <input type="text" id="emailcode" class="form-control form-control-lg" />
+                    <label class="form-label" for="emailcode">Enter code sent to email</label><br>
+                    <span class="codeNotMatch text-danger"></span>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                    <input type="password" id="new-password" class="form-control form-control-lg" />
+                    <label class="form-label" for="new-password">Password (Must contain at least 8 characters)</label>
+                    </div>
+
+                      <div class="form-outline mb-4">
+                    <input type="password" id="new-confirm" class="form-control form-control-lg" />
+                    <label class="form-label" for="new-confirm">Confirm Password</label><br>
+                    <span class="passNotMatch text-danger"></span>
+                    </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="newpassConfirm" class="btn btn-primary">Reset Password</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </form>
+                </br>
 
 {{!------------------------------------------------------
 Sign Up Modal-------------------------------------------------}}
@@ -75,8 +126,6 @@ Sign Up Modal-------------------------------------------------}}
                 </div>
                 </form>
 {{!-------------------------------------------------------------------------------------------------------}}
-                </form>
-
               </div>
             </div>
           </div>
@@ -85,5 +134,11 @@ Sign Up Modal-------------------------------------------------}}
     </div>
   </div>
 </section>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+</script>
 <script src="/js/login.js"></script>
 <script src="/js/signup.js"></script>
+<script src="/js/passwordreset.js"></script>

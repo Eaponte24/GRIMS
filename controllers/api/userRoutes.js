@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const bcrypt = require('bcrypt');
 
 // create login route for api/users/login
 router.post('/login', async (req, res) => {
@@ -68,6 +69,32 @@ router.post("/", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// reset password route
+router.put('/reset', async (req, res) => {
+	try {
+    newPass = await bcrypt.hash(req.body.password, 10);
+		const userData = await User.update(
+			{				
+				password: newPass,
+			},
+			{
+				where: {
+					email: req.body.email,
+				},
+			}
+		);
+
+		if (!userData) {
+			alert('Email not found');
+			return;
+		}
+
+		res.json(userData);
+	} catch (err) {
+		res.status(500).json(err);
+	}
 });
 
 // logout route
