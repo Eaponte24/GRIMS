@@ -6,6 +6,7 @@ const uploadImageToCloudinary = async (file, fileName, department) => {
     let result = await cloudinary.uploader.upload(file, {
       public_id: `products/${department}/${fileName}`,
       unique_filename: true,
+      transformation: [ { width: 200, height: 200, crop: "limit" } ]
     });
     console.log(result);
     return result;
