@@ -2,12 +2,12 @@ const { Product } = require('../models');
 
 const productData = [
 	{
-		product_name: 'Honey Crisp Apples',
-		product_image: 'https://res.cloudinary.com/grims/image/upload/v1672299786/products/produce/honey_crisp_apples.jpg',
-		product_image_200: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_200/v1672299786/products/produce/honey_crisp_apples.jpg',
-		product_image_300: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_300/v1672299786/products/produce/honey_crisp_apples.jpg',
-		product_image_400: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_400/v1672299786/products/produce/honey_crisp_apples.jpg',
-		product_image_500: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_500/v1672299786/products/produce/honey_crisp_apples.jpg',
+		product_name: 'Honeycrisp Apples',
+		product_image: 'https://res.cloudinary.com/grims/image/upload/v1672299786/products/produce/honeycrisp_apples.jpg',
+		product_image_200: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_200/v1672299786/products/produce/honeycrisp_apples.jpg',
+		product_image_300: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_300/v1672299786/products/produce/honeycrisp_apples.jpg',
+		product_image_400: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_400/v1672299786/products/produce/honeycrisp_apples.jpg',
+		product_image_500: 'https://res.cloudinary.com/grims/image/upload/ar_1,c_fill,g_auto,w_500/v1672299786/products/produce/honeycrisp_apples.jpg',
 		price: 1.99,
 		stock: 14,
 		department_id: 1,
