@@ -127,10 +127,10 @@ router.post('/new', async (req, res) => {
 			if (await secure_url) {
 				// split secure_url and insert cloudinary image tranformation to get a smaller image with 
 				// a square crop, then recompose to new secure_url variable. These will be added to the database
-				const secure_url_200 = secure_url.split('/upload/').join('/upload/ar_1,c_thumb,g_auto,w_200/');
-				const secure_url_300 = secure_url.split('/upload/').join('/upload/ar_1,c_thumb,g_auto,w_300/');
-				const secure_url_400 = secure_url.split('/upload/').join('/upload/ar_1,c_thumb,g_auto,w_400/');
-				const secure_url_500 = secure_url.split('/upload/').join('/upload/ar_1,c_thumb,g_auto,w_500/');
+				const secure_url_200 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_200/');
+				const secure_url_300 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_300/');
+				const secure_url_400 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_400/');
+				const secure_url_500 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_500/');
 				console.log(secure_url);
 				try {
 					const productData = await Product.create({
