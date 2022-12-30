@@ -22,6 +22,34 @@ Product.init(
         isUrl: true,
       },
     },
+    product_image_200: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
+    product_image_300: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
+    product_image_400: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
+    product_image_500: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,

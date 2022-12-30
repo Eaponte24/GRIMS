@@ -24,23 +24,6 @@ router.get('/', async (req, res) => {
 	}
 });
 
-// create a new product with a department_id in /api/products
-router.post('/', async (req, res) => {
-	try {
-		const productData = await Product.create({
-			product_name: req.body.product_name,
-			product_image: req.body.product_image,
-			price: req.body.price,
-			stock: req.body.stock,
-			department_id: req.body.department_id,
-		});
-
-		res.json(productData);
-	} catch (err) {
-		res.status(500).json(err);
-	}
-});
-
 // update a product in /api/products/:id
 router.put('/:id', async (req, res) => {
 	try {
@@ -125,11 +108,21 @@ router.post('/new', async (req, res) => {
 			// save the secure_url to the database along with the other fields from the form
 			// wait until secure_url resolves before saving to the database
 			if (await secure_url) {
+				// split secure_url and insert cloudinary image tranformation to get a smaller image with 
+				// a square crop, then recompose to new secure_url variable. These will be added to the database
+				const secure_url_200 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_200/');
+				const secure_url_300 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_300/');
+				const secure_url_400 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_400/');
+				const secure_url_500 = secure_url.split('/upload/').join('/upload/ar_1,c_fill,g_auto,w_500/');
 				console.log(secure_url);
 				try {
 					const productData = await Product.create({
 						product_name: fields.product_name,
 						product_image: secure_url,
+						product_image_200: secure_url_200,
+						product_image_300: secure_url_300,
+						product_image_400: secure_url_400,
+						product_image_500: secure_url_500,
 						price: fields.price,
 						stock: fields.stock,
 						department_id: departmentId,
