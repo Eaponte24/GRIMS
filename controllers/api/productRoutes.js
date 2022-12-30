@@ -24,23 +24,6 @@ router.get('/', async (req, res) => {
 	}
 });
 
-// create a new product with a department_id in /api/products
-router.post('/', async (req, res) => {
-	try {
-		const productData = await Product.create({
-			product_name: req.body.product_name,
-			product_image: req.body.product_image,
-			price: req.body.price,
-			stock: req.body.stock,
-			department_id: req.body.department_id,
-		});
-
-		res.json(productData);
-	} catch (err) {
-		res.status(500).json(err);
-	}
-});
-
 // update a product in /api/products/:id
 router.put('/:id', async (req, res) => {
 	try {
