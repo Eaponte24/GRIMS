@@ -22,8 +22,10 @@ const editFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/");
-    alert("Product updated!");
+    // alert that the product has been updated
+    alert("Product has been updated!");
+    // reload the page
+    document.location.reload();
   } else {
     alert(response.statusText);
   }
