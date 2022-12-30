@@ -23,7 +23,7 @@ const editFormHandler = async (event) => {
 
   if (response.ok) {
     // alert that the product has been updated
-    alert("Product has been updated!");
+    alert(`${productName} has been updated!`);
     // reload the page
     document.location.reload();
   } else {
