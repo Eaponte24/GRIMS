@@ -22,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // homepage route for a single department
-router.get('/departments/:id', async (req, res) => {
+router.get('/departments/:id', withAuth, async (req, res) => {
 	try {
 		const departmentData = await Department.findOne({
 			where: {
@@ -84,7 +84,7 @@ router.get('/product/:search', async (req, res) => {
 });
 
 // get a single product with a department_id in /products/:id
-router.get('/products/:id', async (req, res) => {
+router.get('/products/:id', withAuth, async (req, res) => {
 	try {
 		const productData = await Product.findByPk(req.params.id, {
 			include: [
