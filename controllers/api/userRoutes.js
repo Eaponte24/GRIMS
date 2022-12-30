@@ -43,32 +43,16 @@ router.post('/signup', async (req, res) => {
 			password: req.body.password,
 		});
 
+    req.session.save(() => {
+      req.session.user_id = signupData.id;
+      req.session.email = signupData.email;
+      req.session.loggedIn = true;
+    });
+
 		res.json(signupData);
 	} catch (err) {
 		res.status(500).json(err);
 	}
-});
-
-// create a user route for api/users/
-router.post("/", async (req, res) => {
-  try {
-    const userData = await User.create({
-      email: req.body.email,
-      password: req.body.password,
-    });
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.username = userData.username;
-      req.session.loggedIn = true;
-
-      res.json(userData);
-
-      console.log(userData);
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
 });
 
 // reset password route
