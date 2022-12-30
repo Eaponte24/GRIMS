@@ -14,8 +14,6 @@ const uploadImageToCloudinary = async (file, fileName, department) => {
   }
 };
 
-// test
-//uploadImageToCloudinary("./assets/cheesecake.jpg", "cheesecake1", "dairy")
 // returns a promise that resolves to an object, contains a secure_url property
 
 module.exports = uploadImageToCloudinary;
