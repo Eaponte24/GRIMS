@@ -20,5 +20,17 @@ h5 {
  }
 
  
-  
+ .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.modal-backdrop {
+  z-index: 0;
+}
 
