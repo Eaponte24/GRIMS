@@ -32,9 +32,14 @@ h5 {
   transition: all 0.2s ease;
 }
 
+.modal{
+  margin-top: 4%;
+}
+
 .modal-backdrop {
   z-index: 0;
 }
+
 
 @media screen and (max-width: 768px) {
   .container {
