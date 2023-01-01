@@ -9,8 +9,8 @@
   }
 
 .card1:hover{
-    box-shadow: 5px 6px 6px 2px black;
-    transform: scale(1.1);
+    box-shadow: 5px 6px 6px 2px lightgray;
+    transform: scale(1.025);
 }
 
 h5 {
@@ -47,7 +47,7 @@ h5 {
   }
 
   .card1:hover{
-    transform: scale(1.05);
+    transform: scale(1.0);
 }
 }
 
