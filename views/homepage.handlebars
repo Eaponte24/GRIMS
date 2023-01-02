@@ -14,23 +14,23 @@
   <div class="carousel-inner">
      
     <div class="carousel-item active" data-bs-interval="4000" style="padding: 300px 0px; background-image: url('https://carolinameadows.org/wp-content/uploads/2021/11/nathan-dumlao-bRdRUUtbxO0-unsplash.jpg');  background-position: center;  background-size: cover;">
-      <h5 class="text-center display-4" style="color: darkblue; text-shadow: 4px 4px 8px white; font-weight: bold; font-family: 'Nanum Gothic', sans-serif; ">G.R.I.M.S</h5>
+      <h5 class="text-center display-4" id="caruselText">G.R.I.M.S</h5>
     </div>
    
     {{#each departments as |department| }}
     <a class="link text-decoration-none" href="/departments/{{id}}">      
    <div class="carousel-item" data-bs-interval="4000" style="padding: 300px 0px; background-image: url('{{department.department_image}}');  background-position: center;  background-size: cover;">
-      <h5 class="text-center display-4" style="color: darkblue; text-shadow: 4px 4px 8px white; font-weight: bold; font-family: 'Nanum Gothic', sans-serif;">{{department_name}}</h5>
+      <h5 class="text-center display-4" id="caruselText">{{department_name}}</h5>
     </div>
     </a>
      {{/each}}
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span><i class="fa-solid fa-2xl fa-circle-chevron-left" id="faIcon"></i></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span><i class="fa-solid fa-2xl fa-circle-chevron-right" id="faIcon"></i></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
