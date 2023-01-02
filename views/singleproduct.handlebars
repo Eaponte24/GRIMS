@@ -1,4 +1,4 @@
-<div class="col mb-3">
+{{!-- <div class="col mb-3">
 	<div class="card" style="background-color: rgb(236, 236, 236);">
 		<div class="card-body">
 			<h5 class="text-center display-6 font-weight-bold">
@@ -9,7 +9,62 @@
 			<p class="text-center">Stock: {{singleProduct.stock}}</p>
 		</div>
 	</div>
+</div> --}}
+
+{{!-- <div class="card mb-3">
+  <img src="{{singleProduct.product_image_400}}" class="card-img-top img-fluid" alt="image of {{singleProdcut.product_name}}"/>
+  <div class="card-body">
+    <h5 class="card-title">{{singleProduct.product_name}}</h5>
+			<p class="card-text text-center">Price: ${{singleProduct.price}}</p>
+			<p class="text-center">Stock: {{singleProduct.stock}}</p>
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </p>
+  </div>
+</div> --}}
+
+{{!-- <div class="row row-cols-2 mx-auto" style="justify-content: center;">
+<div class="col-4 mb-3 card" style="width: 18rem;">
+<img src="{{singleProduct.product_image_400}}" class="card-img-top float-start" style="width: 18rem;" alt="image of {{singleProdcut.product_name}}">	
+
+	<div class="card" style="background-color: lightblue;">
+  
+  <div class="card-body" style="height: 75px;">
+    <h5 class="card-title">{{singleProduct.product_name}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Price: ${{singleProduct.price}}</li>
+    <li class="list-group-item">Stock: {{singleProduct.stock}}</li>
+  </ul>
+  </div>
 </div>
+</div> --}}
+
+<div class="card mb-3 row mx-auto" style="max-width: 1000px; justify-content: center; background-color: lightblue;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="{{singleProduct.product_image_400}}"
+        alt="image of {{singleProdcut.product_name}}"
+        class="img-fluid rounded-start"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body text-center">
+        <h5 class="card-title fs-1">{{singleProduct.product_name}}</h5>
+		</div>
+		  <ul class="list-group list-group-flush text-center row mx-auto fs-2" style="max-width: 300px; justify-content: center;">
+    <li class="list-group-item" style=" background-color: rgb(200, 233, 244);">Price: ${{singleProduct.price}}</li>
+    <li class="list-group-item" style=" background-color: rgb(140, 219, 245);">Stock: {{singleProduct.stock}}</li>
+  </ul>
+        {{!-- <p class="card-text text-center">
+          Description Description Description Description Description
+		   Description Description Description Description Description
+		    Description Description Description Description Description
+			 Description Description Description Description Description
+        </p> --}}
+      </div>
+    </div>
+  </div>
 <div class="text-center">
 	<button class="btn btn-danger float-center deleteProduct" type="submit">Delete Product</button>
 	{{!---------------------------------------------------------------------------------------------}}
