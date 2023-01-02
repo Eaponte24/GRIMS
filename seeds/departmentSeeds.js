@@ -4,23 +4,23 @@ const { Department } = require('../models');
 const departmentData = [
   {
     department_name: 'Produce',
-    department_image: 'https://i.ibb.co/WtkbGtD/produce.jpg',
+    department_image: 'https://i.ibb.co/5vbBMZc/produce.png',
   },
   {
     department_name: 'Dairy',
-    department_image: 'https://i.ibb.co/7RhvwRT/dairy.jpg',
+    department_image: 'https://i.ibb.co/MMrbHZR/dairy.jpg',
   },
   {
     department_name: 'Meat',
-    department_image: 'https://i.ibb.co/4sn6WBf/meat.jpg',
+    department_image: 'https://i.ibb.co/NrDwDvc/meat.jpg',
   },
   {
     department_name: 'Seafood',
-    department_image: 'https://i.ibb.co/ftPzgQz/seafood.jpg',
+    department_image: 'https://i.ibb.co/dQT1FKZ/seafood.jpg',
   },
   {
     department_name: 'Bakery',
-    department_image: 'https://i.ibb.co/RyZwD4m/bakery.jpg',
+    department_image: 'https://i.ibb.co/RQ9jB3Q/bakery.jpg',
   }
 ];
 

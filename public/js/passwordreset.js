@@ -23,7 +23,7 @@ var params = {
   const checkEmail = document.querySelector('.checkEmail');
   checkEmail.innerHTML = 'Check your email';
 } else {
-  alert('Please enter a valid account Email')
+  alert('Please enter a valid Email account')
 }
 };
 document.querySelector("#resetemail").addEventListener("click", sendMail);
