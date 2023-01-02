@@ -31,12 +31,10 @@
 
 .card1 {
     transition: all 0.2s ease;
-    /* cursor: pointer; */
   }
 
 .card1:hover {
     box-shadow: 2px 2px 2px 2px lightgray;
-    /* transform: scale(1.025); */
 }
 
 h5 {
