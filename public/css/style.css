@@ -2,6 +2,9 @@
   margin-top: 4%;
 }
 
+#faIcon {
+  color: rgb(239, 239, 239)
+}
 
 .card1{
     transition: all 0.2s ease;
