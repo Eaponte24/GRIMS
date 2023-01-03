@@ -138,7 +138,7 @@ router.post('/new', async (req, res) => {
 					const singleProduct = productData.get({ plain: true });
 					console.log(singleProduct);
 					// render the product page with the new product
-					res.render('singleproduct', { singleProduct, logged_in: req.session.logged_in });
+					res.redirect(`/products/${singleProduct.id}`);
 				} catch (err) {
 					res.status(500).json(err);
 				}
