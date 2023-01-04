@@ -42,6 +42,8 @@ const resetPassword = async (event) => {
     codeNotMatch.innerHTML = 'Code does not match';
    } else if (newPass !== newPassConfirm) {  
     passNotMatch.innerHTML = 'Password does not match';
+   } else if (newPass.length < 8) {
+    alert("Password must be at least 8 characters");
    } else {
     const response =  await fetch(`api/users/reset`, {
       method: 'PUT',
