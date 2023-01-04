@@ -123,7 +123,6 @@ router.get('/login', (req, res) => {
 	res.render('login');
 });
 
-// gather signup page route, will need to add a signup handlebars form
 
 router.get('/signup', (req, res) => {
 	res.render('signup');
