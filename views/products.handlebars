@@ -1,20 +1,22 @@
 <div class="row" style="justify-content: center;">
-{{#each products as |product|}}
-<div class="col-4 mb-3 card1 px-0 mx-2" style="width: 16rem;">
-	{{!-- <a class="link text-decoration-none" href="/products/{{id}}"> --}}
-	<div class="card" style="border-color: lightgray; border-width: 1.5px; border-radius: 8px;">
-  <img src="{{product_image_200}}" class="card-img-top" alt="image of {{product_name}}">
-  <div class="card-body" style="height: 75px; background-color: white;">
-    <h5 class="card-title text-center">{{product_name}}</h5>
-  </div>
-  <ul class="list-group list-group-flush text-center"  style="border-color: white;">
-    <li class="list-group-item" style="border-color: white;">${{price}}</li>
-    <li class="list-group-item" style="border-color: white;">Stock: {{stock}}</li>
-	<div>
-	<button type="button" class="btn btn-sm mb-3" style="padding: 3px 75px; color: white; background-color: darkblue; border-radius: 25px;" onclick="window.location.href='/products/{{id}}';">Details</button>
- </div>
-  </ul>
-  </div>
-</div>
-{{/each}}
+	{{#each products as |product|}}
+	<div class="col-4 m-2 px-0 mx-2" style="width: 16rem;">
+		{{!-- <a class="link text-decoration-none" href="/products/{{id}}"> --}}
+			<div class="card card1" style="border-color: lightgray; border-width: 0.10rem; border-radius: 0.75rem;">
+				<img src="{{product_image_300}}" class="card-img-top p-4" alt="image of {{product_name}}">
+				<div class="card-body" style="height: 4.25rem; background-color: white;">
+					<h5 class="card-title text-center">{{product_name}}</h5>
+				</div>
+				<ul class="list-group list-group-flush text-center" style="border-color: white;">
+					<li class="list-group-item" style="border-color: white;">${{price}}</li>
+					<li class="list-group-item" style="border-color: white;">Stock: {{stock}}</li>
+					<div>
+						<button type="button" class="btn btn-sm mb-3"
+							style="padding: 0.5rem 3rem; color: white; background-color: darkblue; border-radius: 1.5rem;"
+							onclick="window.location.href='/products/{{id}}';"><strong>Details</strong></button>
+					</div>
+				</ul>
+			</div>
+	</div>
+	{{/each}}
 </div>

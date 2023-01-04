@@ -1,61 +1,75 @@
-<div class="card1 card mb-3 row mx-auto" style="max-width: 1000px; justify-content: center; background-color: white; border-color: lightgray; border-width: 1.5px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="{{singleProduct.product_image_400}}"
-        alt="image of {{singleProdcut.product_name}}"
-        class="img-fluid rounded-start"
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body text-center">
-        <h5 class="card-title fs-1">{{singleProduct.product_name}}</h5>
+<div class="card2 card m-3 pb-1 row mx-auto"
+	style="max-width: 1000px; justify-content: center; background-color: white; border-color: lightgray; border-width: 1.5px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img src="{{singleProduct.product_image_500}}" alt="image of {{singleProdcut.product_name}}"
+				class="img-fluid rounded-start p-3" />
 		</div>
-		  <ul class="list-group list-group-flush text-center row mx-auto fs-2" style="max-width: 300px; justify-content: center; border-radius: 10px;">
-    <li class="list-group-item" style=" border-color: white; background-color: white;">${{singleProduct.price}}</li>
-    <li class="list-group-item" style=" border-color: white; background-color: white;">Stock: {{singleProduct.stock}}</li>
-	<br>
-  </ul>
-  <div class="text-center">
-	<button class="btn btn-danger float-center deleteProduct" style="background-color: red; color: white; padding: 3px 35px; border-radius: 25px;" type="submit">Delete Product<i class="fa-solid fa-trash" id="singleprodIcon"></i></button>
-	{{!---------------------------------------------------------------------------------------------}}
-	<button type="button" class="btn" style="background-color: darkblue; color: white; padding: 3px 40px; border-radius: 25px;" data-bs-toggle="modal" data-bs-target="#editModal">
-		Edit Product<i class="fa-solid fa-pen-to-square" id="singleprodIcon"></i>
-	</button>
-
-	<!-- Modal -->
-	<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="editModal">Edit Product</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		<div class="col-md-8">
+			<div class="card-body text-center">
+				<h5 class="card-title fs-1">{{singleProduct.product_name}}</h5>
+			</div>
+			<ul class="list-group list-group-flush text-center row mx-auto fs-2"
+				style="max-width: 300px; justify-content: center; border-radius: 10px;">
+				<li class="list-group-item" style=" border-color: white; background-color: white;">
+					${{singleProduct.price}}</li>
+				<li class="list-group-item" style=" border-color: white; background-color: white;">Stock:
+					{{singleProduct.stock}}</li>
+				<br>
+			</ul>
+			<div class="text-center">
+				<div style="display: inline-block" class="p-1">
+					<button type="button" class="btn"
+						style="background-color: darkblue; color: white; width:13em; padding: 0.5rem; border-radius: 1.5rem;"
+						data-bs-toggle="modal" data-bs-target="#editModal">
+						<strong>Edit Product</strong><i class="fa-solid fa-pen-to-square" id="singleprodIcon"></i>
+					</button>
 				</div>
-				<div class="modal-body">
-					<div class="form-outline mb-3">
-						<label class="form-label float-start" for="">Product Name</label>
-						<input type="text" id="pName" class="form-control form-control-lg" value="{{singleProduct.product_name}}" />
-					</div>
-
-					<div class="form-outline mb-3">
-						<label class="form-label float-start" for="">Product Price</label>
-						<input type="text" id="pPrice" class="form-control form-control-lg" value="{{singleProduct.price}}" />
-					</div>
-
-					<div class="form-outline mb-3">
-						<label class="form-label float-start" for="">Product Stock</label>
-						<input type="text" id="pStock" class="form-control form-control-lg" value="{{singleProduct.stock}}" />
-
-					</div>
+				{{!---------------------------------------------------------------------------------------------}}
+				<div style="display: inline-block" class="p-1">
+					<button class="btn btn-danger float-center deleteProduct"
+						style="background-color: red; color: white; width: 13em; padding: 0.5rem; border-radius: 1.5rem;"
+						type="submit"><strong>Delete Product</strong><i class="fa-solid fa-trash" id="singleprodIcon"></i>
+					</button>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					<button type="button" id="editConfirm" class="btn btn-primary">Confirm</button>
+				{{!---------------------------------------------------------------------------------------------}}
+				<!-- Modal -->
+				<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="editModal">Edit Product</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="form-outline mb-3">
+									<label class="form-label float-start" for="">Product Name</label>
+									<input type="text" id="pName" class="form-control form-control-lg"
+										value="{{singleProduct.product_name}}" />
+								</div>
+
+								<div class="form-outline mb-3">
+									<label class="form-label float-start" for="">Price</label>
+									<input type="text" id="pPrice" class="form-control form-control-lg"
+										value="{{singleProduct.price}}" />
+								</div>
+
+								<div class="form-outline mb-3">
+									<label class="form-label float-start" for="">Stock</label>
+									<input type="text" id="pStock" class="form-control form-control-lg"
+										value="{{singleProduct.stock}}" />
+
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" id="editConfirm" class="btn btn-primary">Confirm</button>
+							</div>
+						</div>
+					</div>
+					</form>
 				</div>
 			</div>
 		</div>
-		</form>
 	</div>
-      </div>
-    </div>
-  </div>
