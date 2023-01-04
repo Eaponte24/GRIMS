@@ -1,143 +1,142 @@
 <section class="" style="background-color: white;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-xl-10">
-        <div class="card" id="login-card" style="border-radius: 1rem;">
-          <div class="row g-0">
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="https://carolinameadows.org/wp-content/uploads/2021/11/nathan-dumlao-bRdRUUtbxO0-unsplash.jpg"
-                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-            </div>
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
-              <div class="card-body p-4 p-lg-5 text-black">
+	<div class="container py-5 h-100">
+		<div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col col-xl-10">
+				<div class="card" id="login-card" style="border-radius: 1rem;">
+					<div class="row g-0">
+						<div class="col-md-6 col-lg-5 d-none d-md-block">
+							<img src="https://carolinameadows.org/wp-content/uploads/2021/11/nathan-dumlao-bRdRUUtbxO0-unsplash.jpg"
+								alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+						</div>
+						<div class="col-md-6 col-lg-7 d-flex align-items-center">
+							<div class="card-body p-4 p-lg-5 text-black">
 
-                <form class="form login-form">
+								<form class="form login-form">
 
-                  <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                    <span class="h1 fw-bold mb-0">G.R.I.M.S</span>
-                  </div>
+									<div class="d-flex align-items-center mb-3 pb-1">
+										<i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+										<span class="h1 fw-bold mb-0">G.R.I.M.S</span>
+									</div>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+									<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
-                  <div class="form-outline mb-4">
-                    <input type="email" id="email-login" class="form-control form-control-lg" />
-                    <label class="form-label" for="email-login">Email address</label>
-                  </div>
+									<div class="form-outline mb-4">
+										<input type="email" id="email-login" class="form-control form-control-lg" />
+										<label class="form-label" for="email-login">Email address</label>
+									</div>
 
-                  <div class="form-outline mb-4">
-                    <input type="password" id="password-login" class="form-control form-control-lg" />
-                    <label class="form-label" for="password-login">Password</label>
-                  </div>
+									<div class="form-outline mb-4">
+										<input type="password" id="password-login" class="form-control form-control-lg" />
+										<label class="form-label" for="password-login">Password</label>
+									</div>
 
-                  <div class="pt-1">
-                    <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
-                  </div>
-                  </form>
-{{!-------------------------------- Forgot password  ---------------------------------------------------------------------------------}}
-            <div class="forgotPassword">
-              <a class="small text-muted" data-bs-toggle="modal" data-bs-target="#resetpassModal">Forgot password?</a>
-            </div>
+									<div class="pt-1">
+										<button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+									</div>
+								</form>
+{{!------------------------------------------ Forgot password-----------------------------------------------}}
+								<div class="forgotPassword">
+									<a class="small text-muted" data-bs-toggle="modal" data-bs-target="#resetpassModal">Forgot
+										password?</a>
+								</div>
 
-<!-- Modal -->
-<div class="modal fade" id="resetpassModal" tabindex="-1" aria-labelledby="resetpassModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="resetpassModal">Reset Password</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                    <div class="modal-body">
-                    <form method='post' action='' enctype="multipart/form-data">
+								<!-- Modal -->
+								<div class="modal fade" id="resetpassModal" tabindex="-1" aria-labelledby="resetpassModal"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h1 class="modal-title fs-5" id="resetpassModal">Reset Password</h1>
+												<button type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
 
-                    <div class="form-outline mb-2">
-                    <input type="email" id="reset-email" class="form-control form-control-lg" />
-                    <label class="form-label" for="reset-email">Enter your account email</label><br>
-                    <span class="checkEmail text-success"></span>
-                    </div>
-                    <button type="button" id="resetemail" class="btn btn-primary mb-4">Send Email</button>
-                    </form>                    
-                    <form>
-                     <div class="form-outline mb-4">
-                    <input type="text" id="emailcode" class="form-control form-control-lg" />
-                    <label class="form-label" for="emailcode">Enter code sent to email</label><br>
-                    <span class="codeNotMatch text-danger"></span>
-                    </div>
+												<div class="form-outline mb-2">
+													<input type="email" id="reset-email" class="form-control form-control-lg" />
+													<label class="form-label" for="reset-email">Enter your account email</label><br>
+													<span class="checkEmail text-success"></span>
+												</div>
+												<button type="button" id="resetemail" class="btn btn-primary mb-4">Send Email</button>
+												</form>
+												<form>
+													<div class="form-outline mb-4">
+														<input type="text" id="emailcode" class="form-control form-control-lg" />
+														<label class="form-label" for="emailcode">Enter code sent to email</label><br>
+														<span class="codeNotMatch text-danger"></span>
+													</div>
 
-                    <div class="form-outline mb-4">
-                    <input type="password" id="new-password" class="form-control form-control-lg" />
-                    <label class="form-label" for="new-password">Password (Must contain at least 8 characters)</label>
-                    </div>
+													<div class="form-outline mb-4">
+														<input type="password" id="new-password" class="form-control form-control-lg" />
+														<label class="form-label" for="new-password">Password</label>
+														<small id="passwordHelpBlock" class="form-text text-muted">
+															(Your password must be at least 8 characters long) </small>
+													</div>
 
-                      <div class="form-outline mb-4">
-                    <input type="password" id="new-confirm" class="form-control form-control-lg" />
-                    <label class="form-label" for="new-confirm">Confirm Password</label><br>
-                    <span class="passNotMatch text-danger"></span>
-                    </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" id="newpassConfirm" class="btn btn-primary">Reset Password</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-                </form>
-                </br>
+													<div class="form-outline mb-4">
+														<input type="password" id="new-confirm" class="form-control form-control-lg" />
+														<label class="form-label" for="new-confirm">Confirm Password</label><br>
+														<span class="passNotMatch text-danger"></span>
+													</div>
+											</div>
+											<div class="modal-footer">
+												<button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" id="newpassConfirm" class="btn btn-primary">Reset Password</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								</br>
 
-{{!------------------------------------------------------
-Sign Up Modal-------------------------------------------------}}
-                                    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
-  Sign Up
-</button>
+{{!---------------------------------------Sign Up Modal-----------------------------------------------------}}
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+									Sign Up
+								</button>
 
-<!-- Modal -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="signupModal">Create Account</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                    <div class="modal-body">
-                    <form method='post' action='' enctype="multipart/form-data">
+								<!-- Modal -->
+								<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h1 class="modal-title fs-5" id="signupModal">Create Account</h1>
+												<button type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
 
-                    <div class="form-outline mb-4">
-                    <input type="email" id="signup-email" class="form-control form-control-lg" />
-                    <label class="form-label" for="signup-email">Email</label>
-                    </div>
+												<div class="form-outline mb-4">
+													<input type="email" id="signup-email" class="form-control form-control-lg" />
+													<label class="form-label" for="signup-email">Email</label>
+												</div>
 
-                    <div class="form-outline mb-4">
-                    <input type="password" id="signup-password" class="form-control form-control-lg" />
-                    <label class="form-label" for="signup-password">Password (Must contain at least 8 characters)</label>
-                    </div>
+												<div class="form-outline mb-4">
+													<input type="password" id="signup-password" class="form-control form-control-lg" />
+													<label class="form-label" for="signup-password">Password</label>
+													<!-- muted text next to label saying password must contain at least 8 characters -->
+													<small id="passwordHelpBlock" class="form-text text-muted">
+														(Your password must be at least 8 characters long) </small>
+												</div>
 
-                      <div class="form-outline mb-4">
-                    <input type="password" id="signup-confirm" class="form-control form-control-lg" />
-                    <label class="form-label" for="signup-confirm">Confirm Password</label>
-                    </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" id="signupConfirm" class="btn btn-primary">Sign Up</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </form>
+												<div class="form-outline mb-4">
+													<input type="password" id="signup-confirm" class="form-control form-control-lg" />
+													<label class="form-label" for="signup-confirm">Confirm Password</label>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" id="signupConfirm" class="btn btn-primary">Sign Up</button>
+											</div>
+										</div>
+									</div>
 {{!-------------------------------------------------------------------------------------------------------}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 </section>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
 <script src="/js/login.js"></script>
 <script src="/js/signup.js"></script>
