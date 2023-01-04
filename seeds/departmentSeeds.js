@@ -1,5 +1,4 @@
 const { Department } = require('../models');
-// departments: produce, dairy, meat, seafood, bakery
 
 const departmentData = [
   {

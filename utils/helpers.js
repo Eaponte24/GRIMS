@@ -1,4 +1,3 @@
-// import Department from '../models/Department';
 const { Department } = require('../models');
 
 getDepartmentId = async (departmentName) => {
