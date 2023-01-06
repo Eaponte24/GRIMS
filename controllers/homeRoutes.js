@@ -63,7 +63,7 @@ router.get('/departments/:id', withAuth, async (req, res) => {
 });
 
 // Search route
-router.get('/product/:search', async (req, res) => {
+router.get('/product/:search', withAuth, async (req, res) => {
 	try {
 		const productSearch = await Product.findAll({
 			where: {
@@ -74,11 +74,17 @@ router.get('/product/:search', async (req, res) => {
 		});
 		const products = productSearch.map((Product) => Product.get({ plain: true }));
 
+		if (products == 0) {
+			res.render('404', { logged_in: req.session.logged_in });
+		} else {
+
 		res.render('products', {
 			products,
 			logged_in: req.session.logged_in,
 		});
-	} catch (err) {
+	}
+	}
+	 catch (err) {
 		res.status(500).json(err);
 	}
 });
