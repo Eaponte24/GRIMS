@@ -119,6 +119,9 @@ h5 {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
 }
+#submit-btn {
+  font-weight: bold;
+}
 
 @media screen and (max-width: 768px) {
   .container {
