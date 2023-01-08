@@ -2,141 +2,155 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/101dd868e0.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-  <title>G.R.I.M.S</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/101dd868e0.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+	<title>G.R.I.M.S</title>
 </head>
 
 <body style="background-color: white;">
-  <header class="display-flex justify-space-between align-center p-2">
-    {{#if logged_in}}
-    <nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: white;">
-      <div class="container-fluid">
-        <a class="navbar-brand" style="color: darkblue; font-family: 'Archivo Black', sans-serif;" href="/"><i class="fas fa-cubes me-1" style="color: #ff6219;"></i>G.R.I.M.S</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-3 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" style="color: darkblue;" aria-current="page" href="/">Home</a>
-            </li>
+	<header class="display-flex justify-space-between align-center p-2">
+		{{#if logged_in}}
+		<nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: white;">
+			<div class="container-fluid">
+				<a class="navbar-brand" style="color: darkblue; font-family: 'Archivo Black', sans-serif;" href="/"><i
+						class="fas fa-cubes me-1" style="color: #ff6219;"></i>G.R.I.M.S</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-3 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" style="color: darkblue;" aria-current="page" href="/">Home</a>
+						</li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" style="color: darkblue;" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Departments
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/departments/1">Produce</a></li>
-                <li><a class="dropdown-item" href="/departments/2">Dairy</a></li>
-                <li><a class="dropdown-item" href="/departments/3">Meat</a></li>
-                <li><a class="dropdown-item" href="/departments/4">Seafood</a></li>
-                <li><a class="dropdown-item" href="/departments/5">Bakery</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link btn" id="logout">Logout</button>
-            </li>
-          </ul>
-          {{!------------------------------------------------------------------------------------------------------}}
-          <!-- Button trigger modal -->
-        <div class="float-start">
-          <button type="button" class="btn mx-2"  style="color: darkblue;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="fa-solid fa-circle-plus"></i>
-            <strong>Add New Product</strong>
-          </button>
-          </div>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" style="color: darkblue;" href="#" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Departments
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/departments/1">Produce</a></li>
+								<li><a class="dropdown-item" href="/departments/2">Dairy</a></li>
+								<li><a class="dropdown-item" href="/departments/3">Meat</a></li>
+								<li><a class="dropdown-item" href="/departments/4">Seafood</a></li>
+								<li><a class="dropdown-item" href="/departments/5">Bakery</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<button class="nav-link btn" id="logout">Logout</button>
+						</li>
+					</ul>
+{{!------------------------------------------------------------------------------------------------------}}
+					<!-- Button trigger modal -->
+					<div class="float-start">
+						<button type="button" class="btn mx-1" id="add-product-btn" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							<span style="color: darkblue;"><i class="fa-solid fa-circle-plus"></i>
+							Add New Product</span>
+						</button>
+					</div>
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="newProductModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <form method='POST' action='/api/products/new' enctype="multipart/form-data">
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="newProductModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<form method='POST' action='/api/products/new' enctype="multipart/form-data">
 
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5">New Product</h1>
-                    <button type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
+									<div class="modal-header">
+										<h1 class="modal-title fs-5">New Product</h1>
+										<button type="reset" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
 
-                    <div class="form-outline mb-3">
-                      <label class="form-label" for="">Product Name</label>
-                      <input type="text" name="product_name" class="form-control form-control-lg" />
-                    </div>
-                    <!-- TO DO: make this dropdown dynamically filled with department names 
-                    so that if a new department is added to the databse it automatically shows up here
-                    use handlebards partials to loop through departments something like this?
-                    <option value="{{department.department_name}}">{{department.department_name}}</option>
-                    how would we captilize the department name? -->
-                    <div class="form-outline mb-3">
-                      <label class="form-label" for="department_name">Department</label>
-                      <select class="form-select" name="department_name" aria-label="grocery department selection">
-                        <option disabled selected>Choose a department</option>
-                        <option value="produce">Produce</option>
-                        <option value="dairy">Dairy</option>
-                        <option value="meat">Meat</option>
-                        <option value="seafood">Seafood</option>
-                        <option value="bakery">Bakery</option>
-                      </select>
-                    </div>
-                    <div class="form-outline mb-3">
-                      <label class="form-label" for="">Price</label>
-                      <input type="text" name="price" class="form-control form-control-lg" />
-                    </div>
+										<div class="form-outline mb-3">
+											<label class="form-label" for="">Product Name</label>
+											<input type="text" name="product_name"
+												class="form-control form-control-lg" />
+										</div>
+										<!-- TO DO: make this dropdown dynamically filled with department names 
+										so that if a new department is added to the databse it automatically shows up here
+										use handlebards partials to loop through departments something like this?
+										<option value="{{department.department_name}}">{{department.department_name}}</option>
+										how would we captilize the department name? -->
+										<div class="form-outline mb-3">
+											<label class="form-label" for="department_name">Department</label>
+											<select class="form-select" name="department_name"
+												aria-label="grocery department selection">
+												<option disabled selected>Choose a department</option>
+												<option value="produce">Produce</option>
+												<option value="dairy">Dairy</option>
+												<option value="meat">Meat</option>
+												<option value="seafood">Seafood</option>
+												<option value="bakery">Bakery</option>
+											</select>
+										</div>
+										<div class="form-outline mb-3">
+											<label class="form-label" for="">Price</label>
+											<input type="text" name="price" class="form-control form-control-lg" />
+										</div>
 
-                    <div class="form-outline mb-3">
-                      <label class="form-label" for="">Stock</label>
-                      <input type="text" name="stock" class="form-control form-control-lg" />
-                    </div>
+										<div class="form-outline mb-3">
+											<label class="form-label" for="">Stock</label>
+											<input type="text" name="stock" class="form-control form-control-lg" />
+										</div>
 
-                    <p>Product Image</p>
-                    <input type="file" name="product_image" multiple="multiple" class="form-control"
-                      id="product-image" />
-                  </div>
-                  <div class="modal-footer">
-                    <button type="reset" style="padding: 0.5rem 2rem; color: white; background-color: rgb(108, 108, 108); border-color: rgb(108, 108, 108); border-radius: 1.5rem;" class="btn btn-secondary" data-bs-dismiss="modal"><strong>Close</strong></button>
-                    <input type="submit" style="padding: 0.5rem 2rem; color: white; background-color: darkblue; border-radius: 1.5rem;" class="btn" id='submit-btn' value="Save" />
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>          
-          {{!--------------------------------------------------------------------------------------------------------------}}
-          <form class="d-flex search-form " role="search">
-            <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" id="srchBTN" style="color: darkblue; border-color: darkblue;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    {{/if}}
-  </header>
-  <main class="container">
-    {{{ body }}}
-  </main>
-  <footer>
+										<p>Product Image</p>
+										<input type="file" name="product_image" multiple="multiple" class="form-control"
+											id="product-image" />
+									</div>
+									<div class="modal-footer">
+										<button type="reset"
+											style="padding: 0.5rem 2rem; color: white; background-color: rgb(108, 108, 108); border-color: rgb(108, 108, 108); border-radius: 1.5rem;"
+											class="btn btn-secondary"
+											data-bs-dismiss="modal"><strong>Close</strong></button>
+										<input type="submit"
+											style="padding: 0.5rem 2rem; color: white; background-color: darkblue; border-radius: 1.5rem;"
+											class="btn" id='submit-btn' value="Save" />
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+{{!--------------------------------------------------------------------------------------------------------------}}
+					<form class="d-flex search-form " role="search">
+						<input class="form-control me-2" id="search" type="search" placeholder="Search"
+							aria-label="Search">
+						<button class="btn btn-outline-primary" id="srchBTN"
+							style="color: darkblue; border-color: darkblue;" type="submit"><i
+								class="fa-solid fa-magnifying-glass"></i></button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		{{/if}}
+	</header>
+	<main class="container">
+		{{{ body }}}
+	</main>
+	<footer>
 
-  </footer>
+	</footer>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  <script src="/js/search.js"></script>
-  <script src="/js/delete.js"></script>
-  <script src="/js/edit.js"></script>
-  {{/if}}
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
+	{{#if logged_in}}
+	<script src="/js/logout.js"></script>
+	<script src="/js/search.js"></script>
+	<script src="/js/delete.js"></script>
+	<script src="/js/edit.js"></script>
+	{{/if}}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
