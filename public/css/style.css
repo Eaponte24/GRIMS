@@ -1,192 +1,221 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-#login-card{
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .25);
+#login-card {
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 .container {
-  margin-top: 4%;
+	margin-top: 4%;
 }
 
 #faIcon {
-  color: rgb(239, 239, 239)
+	color: rgb(239, 239, 239);
 }
 
 #singleprodIcon {
-  padding: .5rem;
+	padding: 0.5rem;
 }
 
 .carousel {
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .25);
-  opacity:0.9;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+	opacity: 0.9;
+	transition: all 0.25s ease-in-out;
 }
 
 .carousel:hover {
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .25);
-  opacity: 1;
-  transition: all .25s ease-in-out;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+	opacity: 1;
+	transition: all 0.25s ease-in-out;
 }
 
 .card1 {
-    transition: all 0.2s ease;
-  }
+	transition: all 0.2s ease;
+}
 
 .card1:hover {
-    box-shadow: 2px 2px 2px 2px lightgray;
+	box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 .card2 {
-  box-shadow: 2px 2px 2px 2px lightgray;
+	box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 h5 {
-  color: black;
+	color: black;
 }
 
 #caruselText {
-  color: rgb(255, 255, 255); 
-  font-weight: bolder; 
-  font-family: 'Archivo Black', sans-serif;
-  font-size:70px;
-  text-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
-  
+	color: rgb(255, 255, 255);
+	font-weight: bolder;
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 70px;
+	text-shadow: 9px 9px 6px rgba(0, 0, 0, 0.25);
 }
 
 .forgotPassword > a:hover {
-  cursor:pointer;
- }
-
- .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+	cursor: pointer;
 }
 
-.modal{
-  margin-top: 4%;
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease;
+}
+
+.modal {
+	margin-top: 4%;
 }
 
 .modal-backdrop {
-  z-index: 0;
+	z-index: 0;
 }
 
 .splash {
-  font-family: 'Archivo Black', sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  z-index: 200;
-  color: white;
-  text-align: center;
-  line-height: 100vh;
-  padding: 21%;
-  font-size: 60px;
+	font-family: 'Archivo Black', sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	z-index: 200;
+	color: white;
+	text-align: center;
+	line-height: 100vh;
+	padding: 21%;
+	font-size: 60px;
 }
 
 .splash.display-none {
-  font-family: 'Archivo Black', sans-serif;
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  z-index: -10;
-  color: white;
-  text-align: center;
-  line-height: 90vh;
-  padding: 21%;
-  transition: all 0.5s ease;
-  font-size: 60px;
+	font-family: 'Archivo Black', sans-serif;
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	z-index: -10;
+	color: white;
+	text-align: center;
+	line-height: 90vh;
+	padding: 21%;
+	transition: all 0.5s ease;
+	font-size: 60px;
 }
-
-
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
-.fade-in{
-  font-size: 60px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
+.fade-in {
+	font-size: 60px;
+	opacity: 0;
+	animation: fadeIn 1s ease-in forwards;
 }
 #submit-btn {
-  font-weight: bold;
+	font-weight: bold;
+}
+
+#logout{
+	color: white;
+	background-color: #ff6219;
+	font-weight: bold;
+	border-radius: 2rem;
+	padding: 0.35rem 1.5rem 0.35rem 1.5rem;
+}
+
+.btn:hover {
+	transform: scale(1.02);
+	/* Scaling button to 1.02 to its original size */
+	box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.24);
+	transition: 0.15s all
+}
+.btn:active {
+	transform: scale(0.95);
+	/* Scaling button to 0.95 to its original size */
+	box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.24);
+	transition: 0.25s all
+}
+#add-product-btn {
+	color: white;
+	font-weight: bold;
+	padding: 0.35rem 1.5rem 0.35rem 1.5rem;
+	box-shadow: none;
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    margin-top: 10%;
-  }
+	.container {
+		margin-top: 10%;
+	}
 
-  .card1:hover{
-    transform: scale(1.0);
+	.card1:hover {
+		transform: scale(1);
+	}
 }
-}
-
 
 /* 404 page styling */
 
 .error-cont {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-  
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
 }
 
 .number {
-  background: #fff;
-  position: relative;
-  font: 900 30vmin "Consolas";
-  letter-spacing: 5vmin;
-  text-shadow: 2px -1px 0 #000, 4px -2px 0 #0a0a0a, 6px -3px 0 #0f0f0f, 8px -4px 0 #141414, 10px -5px 0 #1a1a1a, 12px -6px 0 #1f1f1f, 14px -7px 0 #242424, 16px -8px 0 #292929;
+	background: #fff;
+	position: relative;
+	font: 900 30vmin 'Consolas';
+	letter-spacing: 5vmin;
+	text-shadow: 2px -1px 0 #000, 4px -2px 0 #0a0a0a, 6px -3px 0 #0f0f0f, 8px -4px 0 #141414,
+		10px -5px 0 #1a1a1a, 12px -6px 0 #1f1f1f, 14px -7px 0 #242424, 16px -8px 0 #292929;
 }
 .number::before {
-  background-color: darkblue;
-  background-image: radial-gradient(closest-side at 50% 50%, rgb(241, 112, 0) 100%, rgba(0, 0, 0, 0)), radial-gradient(closest-side at 50% 50%, rgb(241, 112, 0) 100%, rgba(0, 0, 0, 0));
-  background-repeat: repeat-x;
-  background-size: 40vmin 40vmin;
-  background-position: -100vmin 20vmin, 100vmin -25vmin;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: screen;
-  -webkit-animation: moving 10s linear infinite both;
-          animation: moving 10s linear infinite both;
-  display: block;
-  position: absolute;
-  content: "";
+	background-color: darkblue;
+	background-image: radial-gradient(
+			closest-side at 50% 50%,
+			rgb(241, 112, 0) 100%,
+			rgba(0, 0, 0, 0)
+		),
+		radial-gradient(closest-side at 50% 50%, rgb(241, 112, 0) 100%, rgba(0, 0, 0, 0));
+	background-repeat: repeat-x;
+	background-size: 40vmin 40vmin;
+	background-position: -100vmin 20vmin, 100vmin -25vmin;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: screen;
+	-webkit-animation: moving 10s linear infinite both;
+	animation: moving 10s linear infinite both;
+	display: block;
+	position: absolute;
+	content: '';
 }
 @-webkit-keyframes moving {
-  to {
-    background-position: 100vmin 20vmin, -100vmin -25vmin;
-  }
+	to {
+		background-position: 100vmin 20vmin, -100vmin -25vmin;
+	}
 }
 @keyframes moving {
-  to {
-    background-position: 100vmin 20vmin, -100vmin -25vmin;
-  }
+	to {
+		background-position: 100vmin 20vmin, -100vmin -25vmin;
+	}
 }
 
 .text {
-  font: 400 5vmin "Courgette";
-  font-family: 'Archivo Black', sans-serif;
+	font: 400 5vmin 'Courgette';
+	font-family: 'Archivo Black', sans-serif;
 }
 .text span {
-  font-size: 10vmin;
-  font-family: 'Archivo Black', sans-serif;
+	font-size: 10vmin;
+	font-family: 'Archivo Black', sans-serif;
 }
