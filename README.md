@@ -26,7 +26,7 @@ This application is based on **node v16.18.1**. It is built using the **MEHN** s
 ## Usage
 When you load the [web application](https://grims-inventory.herokuapp.com/) you'll be greeted by a welcome screen and then presented with a login page. You have the option to login, reset your password, or create an account. If you don't have an account you can create one by clicking the **Sign Up** button on the login page. If you have an account but have forgotten your password you can reset it by clicking the **Forgot Password?** link on the login page. Once you have logged in you will be redirected to the dashboard. The dashboard is where you can select a department and view your products, add new products, and edit or delete existing products.
 
-### Create an account
+### Creating an account
 To create an account, click the **Sign Up** button on the login page. You will be prompted to enter a username and password. Once you have entered your information, click the **Sign Up** button within the form. You will be redirected to the login page. Enter your username and password and click the **Login** button. You will be redirected to the dashboard.
 <br>
 
