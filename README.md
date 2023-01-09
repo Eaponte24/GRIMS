@@ -38,23 +38,28 @@ To reset your password, click the **Forgot Password?** link on the login page. Y
 
 ![Reset Password](./public/images/reset-password.png)
 
+
 ### Navigating the dashboard
 Once you are logged in the first thing you see is an image carousel that rotates through each department. You are on the dashboard. The dashboard is where you can view your products, add new products, and edit or delete existing products. The dashboard is organized by department. You can select a department from the dropdown menu at the top of the page, or click on the department name from the image carousel. Once you have selected a department you will be presented with an overview of the products within the department as cards. You can click on the **Details** button on a product to edit it's information or delete it from the inventory. You can also add a new product by clicking the **Add New Product** button at the top of the page.
 <br>
+
+https://user-images.githubusercontent.com/39972418/211234275-69de05dc-5874-47d6-8c0f-ca5cef58b0e3.mp4
 
 
 ### Adding a new product
 The **Add New Product** button will open a form where you can enter the product's information. Once you have entered the product's information, click the **Save** button to add the product to the inventory. You will be redirected to the dashboard and the product will be displayed as a card. You can click on the **Details** button to edit the product's information or delete it from the inventory.
 <br>
 
+https://user-images.githubusercontent.com/39972418/211234331-ec60fd4c-0820-4552-a200-b4af2b4bee86.mp4
+
 
 ### Editing and deleting products
 To edit and delete a products click the **Details** button on the product card to get to that product's page. From there you will have the option to edit and delete that product. Click the **Edit Product** button and you will be presented with a form that allows you to edit the Product Name, Price, and Stock. Click **Confirm** to save your changes. You will be redirected to the product's page. Click the **Delete Product** button to delete the product from the inventory. You will be redirected to the dashboard. You will no longer see that product when you browse products in that department.
 <br>
 
+https://user-images.githubusercontent.com/39972418/211234366-518aa73c-dc6b-4b52-b81f-2e65987961ce.mp4
 
 ## Credits
-
 This application uses various open source packages. Below is a list of the packages used in this application and links to their documentation.
 <br>
 EmailJS - [https://www.emailjs.com/](https://www.emailjs.com/)
