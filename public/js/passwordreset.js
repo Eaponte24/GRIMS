@@ -9,7 +9,7 @@ function makeid(length) {
 }
 var code = makeid(5);
 (function () {
-emailjs.init("5tEXcH9M_UCcOCHoY");
+emailjs.init("OnKmR5IiXfYozn5E0");
 })();
 function sendMail() {
 const emailreset = document.querySelector('#reset-email').value.trim();
